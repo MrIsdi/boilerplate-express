@@ -4,23 +4,23 @@
     "password": null,
     "database": "boilerplate_dev",
     "host": "127.0.0.1",
-    "dialect": "sqlite",
-    "storage": "./src/database/boilerplate_dev.sqlite"
+    "port": 3306,
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": null,
     "database": "boilerplate_test",
     "host": "127.0.0.1",
-    "dialect": "sqlite",
-    "storage": ":memory:" 
+    "port": 3306,
+    "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": null,
     "database": "boilerplate_prod",
     "host": "127.0.0.1",
-    "dialect": "sqlite",
-    "storage": "./src/database/boilerplate_prod.sqlite"
+    "port": 3306,
+    "dialect": "mysql"
   }
 }
