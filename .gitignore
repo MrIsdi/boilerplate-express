@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+.env
+
+# Coverage
+coverage/
+
+# Build artifacts
+build/
+dist/
+
+# Database
+*.sqlite
+
+# OS specific
+.DS_Store
+Thumbs.db
