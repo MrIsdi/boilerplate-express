@@ -39,7 +39,13 @@ This is a boilerplate for Express.js applications built with SOLID principles an
     ```
     Make sure to set `JWT_SECRET` to a strong, random string.
 
-4.  Run database migrations:
+4.  Create the database (if it doesn't exist):
+    ```bash
+    npx sequelize-cli db:create
+    ```
+    This command will create the database specified in your `src/config/config.json` for the current environment (development by default).
+
+5.  Run database migrations:
     ```bash
     npx sequelize-cli db:migrate
     ```
