@@ -4,23 +4,23 @@ This is a boilerplate for Express.js applications built with SOLID principles an
 
 ## Features
 
--   **Express.js**: Fast, unopinionated, minimalist web framework for Node.js.
--   **Sequelize**: Promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and SQL Server.
--   **Passport.js**: Simple, unobtrusive authentication for Node.js.
--   **JWT (JSON Web Tokens)**: For stateless authentication.
--   **Bcrypt**: For password hashing.
--   **Express Validator**: For server-side data validation.
--   **Swagger UI Express**: For API documentation.
--   **Jest & Supertest**: For testing.
--   **dotenv**: For managing environment variables.
--   **CORS**: Cross-Origin Resource Sharing enabled.
+- **Express.js**: Fast, unopinionated, minimalist web framework for Node.js.
+- **Sequelize**: Promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and SQL Server.
+- **Passport.js**: Simple, unobtrusive authentication for Node.js.
+- **JWT (JSON Web Tokens)**: For stateless authentication.
+- **Bcrypt**: For password hashing.
+- **Express Validator**: For server-side data validation.
+- **Swagger UI Express**: For API documentation.
+- **Jest & Supertest**: For testing.
+- **dotenv**: For managing environment variables.
+- **CORS**: Cross-Origin Resource Sharing enabled.
 
 ## Getting Started
 
 ### Prerequisites
 
--   Node.js (v14 or higher recommended)
--   npm (Node Package Manager)
+- Node.js (v14 or higher recommended)
+- npm (Node Package Manager)
 
 ### Installation
 
@@ -34,12 +34,22 @@ This is a boilerplate for Express.js applications built with SOLID principles an
     npm install
     ```
 3.  Create a `.env` file by copying `.env.example` and fill in your environment variables:
+
     ```bash
     cp .env.example .env
     ```
+
     Make sure to set `JWT_SECRET` to a strong, random string.
 
-4.  Run database migrations:
+4.  Create the database (if it doesn't exist):
+
+    ```bash
+    npx sequelize-cli db:create
+    ```
+
+    This command will create the database specified in your `src/config/config.json` for the current environment (development by default).
+
+5.  Run database migrations:
     ```bash
     npx sequelize-cli db:migrate
     ```
@@ -59,8 +69,8 @@ API documentation will be available at `http://localhost:3000/api-docs`.
 
 ### Authentication
 
--   `POST /api/v1/auth/register` - Register a new user
--   `POST /api/v1/auth/login` - Log in a user and get a JWT token
+- `POST /api/v1/auth/register` - Register a new user
+- `POST /api/v1/auth/login` - Log in a user and get a JWT token
 
 ## Testing
 
